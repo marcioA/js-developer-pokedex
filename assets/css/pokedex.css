@@ -6,6 +6,20 @@
     list-style: none;
 }
 
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    /* Comece a imagem ligeiramente abaixo da sua posição final */
+    transition: opacity 5s ease, transform 5s ease;
+    /* Adicione uma transição suave */
+}
+
+.fade-in.loaded {
+    opacity: 1;
+    transform: translateY(0);
+    /* Volte a imagem à sua posição original */
+}
+
 .normal {
     background-color: #a6a877;
 }
@@ -162,4 +176,10 @@
     .pokemons {
         grid-template-columns: 1fr 1fr 1fr 1fr;
     }
+}
+
+#loadMoreButton {
+    padding: 1rem;
+    font-size: 1rem;
+    -webkit-font-smoothing: antialiased;
 }
